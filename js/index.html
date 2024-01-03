@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        .demo{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">helo</h1>
+    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iusto pariatur, ex praesentium nobis suscipit
+        explicabo deleniti, corporis amet nesciunt laudantium porro aspernatur? Sit asperiores eum, totam quaerat
+        repudiandae atque!</p>
+        <div class="demo" id="demo">
+
+        </div>
+        <input type="text" id="input" onkeyup="typeHere()" >
+
+        <button onclick="changeColor()">click me</button>
+    <!-- internal js -->
+    <script>
+
+        // dom => document object model
+        /*
+        multi
+        line
+        comment
+        in
+        js
+        */
+        document.write("hello")
+        console.log("hello World!")
+        // a = prompt("enter your name")
+        // console.log(a)
+
+        // document.getElementById("heading").innerHTML = a;
+
+        function changeColor(){
+            document.getElementById('paragraph').style.color = 'green';
+            document.getElementById('paragraph').style.backgroundColor = 'black';
+            document.getElementById("demo").style.backgroundColor = "black"
+
+        }
+    </script>
+    <!-- external js -->
+    <script src="index.js"></script>
+</body>
+
+</html>

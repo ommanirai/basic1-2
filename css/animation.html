@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .container{
+            height: 300px;
+            width: 300px;
+            background-color: #168bc5;
+            animation: myNextAnimation 2s ease 2s infinite normal forwards;
+        }
+        @keyframes myAnimation {
+            from{
+                background-color: aqua;
+            }
+            to{
+                background-color: red;
+                border-radius: 50%;
+            }
+        }
+        @keyframes myNextAnimation {
+            0%{
+
+            }
+            25%{
+                background-color: yellowgreen;
+                transform: translate(500px);
+                border-radius: 25%;
+            }
+            50%{
+                background-color: aqua;
+                transform: translate(500px, 300px);
+                border-radius: 50%;
+            }
+            75%{
+                background-color: violet;
+                transform: translateY(300px);
+                border-radius: 25%;
+            }
+            100%{
+                background-color: springgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>

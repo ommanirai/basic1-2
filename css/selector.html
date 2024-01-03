@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        /* element selector */
+        p{
+            color: red;
+            background-color: aqua;
+        }
+
+        div{
+            color: yellowgreen;
+        }
+        /* class selector */
+        .demo{
+            color: blue;
+            background-color: black;
+        }
+        .newone{
+            background-color: brown;
+        }
+        /* id selector */
+        #myid{
+            color: red;
+        }
+        #xyz{
+            color: yellow;
+        }
+        h4{
+            color: aqua;
+        }
+        .abc{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        selector:
+        syntax:
+
+        selector_name
+        {
+           attribute: value; 
+           attribute: value; 
+           attribute: value; 
+           attribute: value; 
+           attribute: value; 
+           attribute: value; 
+           attribute: value; 
+           attribute: value; 
+        }
+        types of selector:
+        1. element selector
+        => all the html element
+        2. class selector
+        => user defined classes
+        => represent by dot(.) symbol
+        => can be used multiple times
+        3. id selector
+        => user defined ids
+        => represent by hash(#) symbol
+        => id must be unique
+
+        PRIORITY
+        ID SELECTOR > CLASS SELECTOR > ELEMENT SELECTOR
+    -->
+    <p>hello</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis excepturi beatae numquam blanditiis! Hic error, aut fugit eos nobis a alias? Npatus cum beatae odio placeat corporis iure ullam labore.</p>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia, dolorum quod perferendis libero quae. Esse, aliquid autem, ducimus eius praesentium officiis sit doloremque nam quis quas illo? Quibusdam, quas?</div>
+    <h1 class="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam iusto, sed exercitationem recusandae, eaque placeat modi natus corporis beatae laborum consequuntur, porro alias amet quod fugit dolorum ut nihil laudantium.</h1>
+    <h2 class="newone demo">Lorem ipsum dolor sit amet.</h2>
+    <h3 id="myid">id selector</h3>
+    <h4  id="xyz" class="abc">letes see the priority</h4>
+</body>
+</html>

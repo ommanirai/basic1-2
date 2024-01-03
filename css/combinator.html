@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator</title>
+    <style>
+        /* 
+        types of combinator:
+        1. grouping combinator
+        2. descendent selector
+        3. child selector
+        4. general sibling selector
+        5. adjacent sibling selector
+        */
+        /* h1{
+            color: red;
+        }
+        p{
+            color: red;
+        } */
+        /* 1. grouping selector */
+        h1,
+        p {
+            color: aqua;
+        }
+
+        /* 2. descendent selector */
+        .parent div {
+            color: yellowgreen;
+        }
+
+        /* 3. child selector */
+        .parent>div {
+            color: red;
+        }
+        /* 4. general sibling selector */
+        .grandchild1~div{
+            color: tomato;
+        }
+
+        /* 5. adjacent sibling selector */
+        .grandchild1+div{
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat porro enim tempora inventore accusantium
+        pariatur consequuntur, fugiat ea ut nostrum rem illo voluptatibus, suscipit officia odit ullam labore quidem
+        accusamus.</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis et saepe ipsum! Tenetur impedit obcaecati
+        modi ad atque dolorem et, hic officia cupiditate quod aliquam ab, neque culpa, sapiente commodi?</p>
+
+    <div class="parent">
+        Parent
+        <div class="child1">child 1
+            <div class="grandchild1">grand child first</div>
+            <div class="grandchild2">grand child second</div>
+            <div class="grandchild3">grand child third</div>
+            <div class="grandchild4">grand child fourth</div>
+            <div class="grandchild5">grand child fifth</div>
+        </div>
+        <span>span first</span>
+        <div class="child2">child 2</div>
+        <div class="child3">child 3</div>
+    </div>
+</body>
+
+</html>

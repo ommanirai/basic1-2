@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        /* 
+        vw => viewport width
+        vh => viewport height
+        
+        */
+        .header{
+            width: 100%;
+            height: 50px;
+            /* width: 100vw;
+            height: 10vh; */
+            background-color: aqua;
+        }
+        .main{
+            width: 100%;
+            /* width: 100vw;
+            height: 80vh; */
+            display: flex;
+        }
+        .left{
+            width: 25%;
+            height: 600px;
+            /* width: 25vw;
+            height: 80vh; */
+            background-color: brown;
+        }
+        .right{
+            width: 75%;
+            /* width: 75vw; */
+        }
+        .right-top{
+            width: 100%;
+            height: 300px;
+            /* width: 75vw;
+            height: 40vh; */
+            background-color: blueviolet;
+        }
+        .right-bottom{
+            width: 100%;
+            /* width: 75vw; */
+            display: flex;
+        }
+        .right-bottom-left{
+            width: 50%;
+            height: 300px;
+            /* width:30vw ;
+            height: 40vh; */
+            background-color: yellowgreen;
+        }
+        .right-bottom-right{
+            width: 50%;
+            height: 300px;
+            /* width: 45vw;
+            height: 40vh; */
+            background-color:violet;
+        }
+        .footer{
+            width: 100%;
+            height: 55px;
+            /* width: 100vw;
+            height: 10vh; */
+            background-color: springgreen;
+        }
+        .header>ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+            padding: 30px;
+            font-size: 30px;
+            position: relative;
+        }
+        li:hover{
+            color: rgb(76, 11, 182);
+            /* font-weight: bold; */
+            cursor:pointer;
+        }
+        .sub-category{
+            position: absolute;
+            list-style: none;
+            display: none;
+            background-color: greenyellow;
+            padding-left: 0;
+        }
+        .sub-category li{
+            padding: 10px;
+        }
+        .category li:hover .sub-category{
+            display: block;
+        }
+        .sub-category li:hover{
+            background-color: yellow;
+        }
+        .sub-sub-category{
+            display: none;
+        }
+        .sub-category li{
+            position: relative;
+        }
+        .sub-category li:hover .sub-sub-category{
+            display: block;
+            position: absolute;
+            left:100%;
+            top: 0;
+            list-style: none;
+            background-color: yellowgreen;
+            padding: 0;
+        }
+        select{
+            display: none;
+        }
+        @media screen and (max-width: 600px) {
+            .header{
+                display: none;
+            }
+            select{
+                display: block;
+                width: 100%;
+                padding: 20px;
+                /* height: 10vh; */
+                background-color: #4dc157;
+                text-align: center;
+            }
+            .main{
+                flex-direction: column;
+                width: 100%;
+            }
+            .left{
+                width: 100%;
+                height: 300px;
+            }
+            .right{
+                width: 100%;
+            }
+            .right-top{
+                width: 100%;
+                height: 200px;
+            }
+            .right-bottom{
+                flex-direction: column;
+                width: 100%;
+                height: 300px;
+            }
+            .right-bottom-left{
+                height: 100px;
+                width: 100%;
+                height: 300px;
+            }
+            .right-bottom-right{
+                width: 100%;
+                height: 200px;
+            }
+            .footer{
+                /* height: 100px; */
+                padding: 10px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <select name="" id="">
+         <option value="">Home</option>
+         <option value="">Product</option>
+         <option value="">Blog</option>
+         <option value="">About</option>
+         <option value="">Contact</option>
+    </select>
+    <div class="header">
+        <ul class="category">
+            <li>Home</li>
+            <li>Product
+                <ul class="sub-category">
+                    <li>Laptop
+                        <ul class="sub-sub-category">
+                            <li>Acer</li>
+                            <li>Asus</li>
+                            <li>Apple</li>
+                            <li>Lenovo</li>
+                            <li>Samsung</li>
+                        </ul>
+                    </li>
+                    <li>Smartphone</li>
+                    <li>Camera
+                        <ul class="sub-sub-category">
+                            <li>Nikon</li>
+                            <li>Canon</li>
+                            <li>Panasonic</li>
+                        </ul>
+                    </li>
+                    <li>Beauty</li>
+                    <li>Fitness</li>
+                </ul>
+            </li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="left">le
+            ft sidebar</div>
+        <div class="right">
+            <div class="right-top">
+                right top
+                <!-- <div class="right-top-top">
+                    <div class="right-top-top-left">right top top left</div>
+                    <div class="right-top-top-right">right top top right</div>
+                </div>
+                <div class="right-top-bottom">right top bottom</div> -->
+            </div>
+            <div class="right-bottom">
+                <div class="right-bottom-left">right bottom left</div>
+                <div class="right-bottom-right">right bottom right</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        footer
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List in HTML</title>
+</head>
+
+<body>
+    <!-- 
+        types of list
+        1. ordered list (OL) => number(1), alphabet(lowercase(a), uppercase(A)), roman(lower(i), upper(I))
+        2. unordered list (UL) => bullet, circle, square
+    -->
+
+    <!-- orderd list -->
+    <h1>List of Fruits</h1>
+    <ol type="a" start="">
+        <li>apple
+            <!-- nested list -->
+            <ol type="i">
+                <li>humla</li>
+                <li>jumla</li>
+                <li>mustang</li>
+                <li>morang</li>
+            </ol>
+        </li>
+        <li>mango</li>
+        <li>orange</li>
+        <li>kiwi</li>
+        <li>pineapple</li>
+    </ol>
+
+    <!-- unordered list -->
+    <h1>Bikes</h1>
+    <ul type="" style="list-style: '=>';">
+        <li>Honda
+            <!-- first nested list-->
+            <ul>
+                <li>red
+                    <!-- second nested list -->
+                    <ul>
+                        <li>something</li>
+                    </ul>
+                </li>
+                <li>black</li>
+            </ul>
+        </li>
+        <li>Pulser</li>
+        <li>Suzuki</li>
+    </ul>
+
+</body>
+
+</html>
